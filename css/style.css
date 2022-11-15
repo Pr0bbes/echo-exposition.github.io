@@ -1,0 +1,107 @@
+@import "fonts";
+
+@font-face {
+	font-family: LemonMilk;
+	src: url(../fonts/LEMONMILK-Regular.woff);
+}
+
+@font-face {
+	font-family: LemonMilk_bold;
+	src: url(../fonts/LEMONMILK-Bold.woff);
+}
+
+
+
+/* Elements base */
+
+body{
+	height:100vh;
+	/* background: rgb(0,0,0); */
+	background: linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
+}
+
+h1, h2, h3{
+	font-family: LemonMilk;
+	font-weight: 300;
+	line-height: 1.375;
+	letter-spacing: 0.0em;
+	margin: 0 0 0.8rem 0;
+}
+
+h1 {
+	font-size: 3.0rem;
+}
+
+a {
+	-moz-transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+	text-decoration: underline;
+	padding: 1rem;
+	border-radius: 50px;
+	color: #000000;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+	a:hover {
+		text-decoration: none;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+	}
+
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.menu{
+	padding: 0.5rem 0rem 1rem 0rem;
+}
+
+.ban{
+	width:100%;
+}
+
+.inner {
+			display: inherit;
+			overflow-x: auto;
+			overflow-y: hidden;
+			vertical-align: middle;
+			text-align: center;
+			position: relative;
+			width: 100%;
+}
+
+
+footer {
+	padding: 2.5rem 0rem 0.5rem 0rem;
+}
+
+/* Icons */
+
+ul.icons {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+	padding-bottom: 0.8rem;
+}
+
+	ul.icons li {
+		display: inline-block;
+		padding: 0 1rem 0 0;
+	}
+
+		ul.icons li:last-child {
+			padding-right: 0;
+		}
+
+
+
