@@ -11,13 +11,18 @@
 }
 
 
-
 /* Elements base */
 
-body{
-	height:100vh;
-	/* background: rgb(0,0,0); */
+html, body{	
+	width: 100%;
+	height: 100vw;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background: #A1D6F7 100%;
+	background: -webkit-linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
 	background: linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
+	background-attachment: fixed;
 }
 
 h1, h2, h3{
@@ -31,24 +36,6 @@ h1, h2, h3{
 h1 {
 	font-size: 3.0rem;
 }
-
-a {
-	-moz-transition: color 0.2s ease-in-out;
-	-webkit-transition: color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out;
-	transition: color 0.2s ease-in-out;
-	text-decoration: underline;
-	padding: 1rem;
-	border-radius: 50px;
-	color: #000000;
-	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-}
-
-	a:hover {
-		text-decoration: none;
-		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
-	}
-
 
 .align-left {
 	text-align: left;
@@ -85,6 +72,52 @@ footer {
 	padding: 2.5rem 0rem 0.5rem 0rem;
 }
 
+/* Top */
+.top {
+	position: relative;
+	margin: 0 2rem;
+}
+
+.top img {
+	width: 10%;
+	float:left;	
+}
+
+.menu {
+	font-family: LemonMilk;
+	font-size: 1.5vw;
+	padding-top: 2vw;
+	z-index: 10;
+}
+
+.top a {
+	text-decoration: none;
+	color:rgba(0, 0, 0);
+}
+
+.top a:hover {
+	color:rgba(0, 0, 0);
+	border-bottom: 14px solid #000000;
+}
+
+.top ul {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+	padding-bottom: 0.8rem;
+	float: right;
+	border-bottom: 3px solid #000000;
+}
+
+	.top li {
+		display: inline-block;
+		padding: 0 1rem 0 0;
+	}
+
+		.top li:last-child {
+			padding-right: 0;
+		}
+
 /* Icons */
 
 ul.icons {
@@ -102,6 +135,23 @@ ul.icons {
 		ul.icons li:last-child {
 			padding-right: 0;
 		}
+
+.icons a {
+	-moz-transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+	text-decoration: underline;
+	padding: 1rem;
+	border-radius: 50px;
+	color: #000000;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+	.icons a:hover {
+		text-decoration: none;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+	}
 
 
 

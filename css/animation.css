@@ -1,0 +1,51 @@
+@import "fonts";
+
+@font-face {
+	font-family: LemonMilk;
+	src: url(fonts/LEMONMILK-Regular.woff);
+}
+
+@font-face {
+	font-family: LemonMilk_bold;
+	src: url(fonts/LEMONMILK-Bold.woff);
+}
+
+canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
+
+.layer-middle {
+	z-index: 5;
+}
+
+.def {
+	position: relative;
+	margin: 0vw 2vw 0vw 3vw;
+	height: 16vw;
+	padding-top: 6rem;
+	padding-bottom: 8rem;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+}
+
+.letterTop {	
+	float: left;
+}
+
+.letterTop h1 {
+	font-family: LemonMilk_bold;
+	font-size: 13.0vw;
+	margin: 0rem;
+	padding-top: 1.5vw;
+	
+}
+	.letterTop h1:hover {
+		font-size: 15vw;
+		padding-top: 0rem;
+	}
+
+
