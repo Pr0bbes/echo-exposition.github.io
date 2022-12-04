@@ -15,14 +15,31 @@
 
 html, body{	
 	width: 100%;
-	height: 100vw;
 	margin: 0px;
 	padding: 0px;
-	overflow: hidden;
-	background: #A1D6F7 100%;
+	/* overflow: hidden; */
+	background: #A1D6F7;
 	background: -webkit-linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
 	background: linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
-	background-attachment: fixed;
+	transition: 1s ease-in-out;
+}
+
+.col_linear {
+	background: #A1D6F7;
+	background: -webkit-linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
+	background: linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
+}
+
+.col_bleu {
+	background: #A1D6F7;
+}
+
+.col_red {
+    background: #EA5D5D;
+}
+
+.col_yellow {
+    background: #F9EE8B;
 }
 
 h1, h2, h3{
@@ -49,6 +66,10 @@ h1 {
 	text-align: right;
 }
 
+.clear {
+	clear: both;
+}
+
 .menu{
 	padding: 0.5rem 0rem 1rem 0rem;
 }
@@ -67,15 +88,12 @@ h1 {
 			width: 100%;
 }
 
-
-footer {
-	padding: 2.5rem 0rem 0.5rem 0rem;
-}
-
 /* Top */
 .top {
 	position: relative;
-	margin: 0 2rem;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	height: 10vw;
 }
 
 .top img {
@@ -85,7 +103,7 @@ footer {
 
 .menu {
 	font-family: LemonMilk;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	padding-top: 2vw;
 	z-index: 10;
 }
@@ -111,15 +129,198 @@ footer {
 
 	.top li {
 		display: inline-block;
-		padding: 0 1rem 0 0;
+		padding: 0 2rem 0 0;
 	}
 
 		.top li:last-child {
 			padding-right: 0;
 		}
 
-/* Icons */
 
+/* Banner */
+
+.banner {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.slogan {
+	position: relative;
+	float: left;	
+	padding-top: 8vw;
+	padding-bottom: 3vw;
+	padding-left: 2vw;
+	vertical-align: middle;
+	text-align: center;
+	width: 45%;
+}
+
+.slogan-line {
+	position: relative;
+	height: 8.4vw;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+}
+
+.letterTop {	
+	float: left;
+}
+
+.letterTop h1 {
+	font-family: LemonMilk_bold;
+	font-size: 5vw;
+	margin: 0rem;
+	padding-top: 0.8vw;
+	
+}
+	.letterTop h1:hover {
+		font-size: 6vw;
+		padding-top: 0rem;
+	}
+
+#ban_1 {
+	position: absolute;
+	right: 0;
+	top: 7vw;
+	width: 44%;
+	z-index: 3;
+}
+
+#ban_2 {
+	width: 14%;
+	height: 7.4vw;
+	position: absolute;
+	right: 29vw;
+	top: 17.5vw;
+	z-index:5;
+	animation: ban2 1.5s;
+}
+	#ban_2:hover {
+		right: 28.4vw;
+		width: 15%;
+	}
+
+	@keyframes ban2 {
+		0% {
+			height: 0vw;
+		}
+		50% {
+			height: 0vw;
+		}
+		80% {
+			height: 7.6vw;
+		}
+	}
+
+#ban_3 {
+	width: 12%;
+	position: absolute;
+	right: 0;
+	top: 12vw;
+	z-index:5;
+	animation: ban3 1.2s;
+}
+	#ban_3:hover {
+		width: 13%;
+	}
+
+	@keyframes ban3 {
+		0% {
+			right: -14%;
+			top: 9vw;
+		}
+		50% {
+			right: -14%;
+			top: 9vw;
+		}
+		100% {
+			right: 0;
+			top: 12vw;
+		}
+	}
+
+#ban_4 {
+	width: 50%;
+	position: absolute;
+	right:0; 
+	top:12vw; 
+	z-index: 4;
+	animation: ban4 0.6s;
+}
+
+@keyframes ban4 {
+	from {
+		right: -50%;
+		top: 5vw;
+	}
+	to {
+		right:0; 
+		top:12vw; 
+	}
+}
+
+/* Expo Info */
+.info {
+	position: relative;
+	margin-top: 8vw;
+	border-top: 3px solid #000000;
+	font-family: LemonMilk;
+	width: 100%;
+	font-size: 1.3vw;
+}
+
+.info ul {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+	padding-bottom: 0.8rem;
+	float: right;
+}
+
+	.info li {
+		display: inline-block;
+		padding: 0 9.4vw 0 0;
+	}
+
+		.info ul li:last-child {
+			padding-right: 2vw;
+		}
+
+#info_canvas {
+	position: absolute;
+	left: 2vw;
+	top: 1.4vw;
+	width: 20vw;
+	height: 3.6vw;
+}
+
+/* Definition */
+.def {
+	margin-top: 20vw;
+}
+
+#def_canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: solid 1px #000;
+	z-index: 100;
+
+}
+
+
+
+/* Footer */
+footer {
+	margin-top: 8vw;
+	padding: 5vw 0vw 0.5vw 0vw;
+}
+
+/* Icons */
 ul.icons {
 	cursor: default;
 	list-style: none;

@@ -13,9 +13,9 @@
 
 </head>
 
-<body>
+<body class="col_linear">
 
-	<div>
+	<div id="first_page">
 		<!-- Top -->
 		<div class="top layer-middle">
 			<a href="index.html"><img src="img/logo_noir.png" alt="logo_noir"></a>
@@ -28,24 +28,75 @@
 			</div>
 		</div>
 
-		<!-- Bannder -->
-		<div class="def layer-middle inner">
-			<div class="letterTop"><h1>S</h1></div>
-			<div class="letterTop"><h1>Y</h1></div>
-			<div class="letterTop"><h1>N</h1></div>
-			<div class="letterTop"><h1>E</h1></div>
-			<div class="letterTop"><h1>S</h1></div>
-			<div class="letterTop"><h1>T</h1></div>
-			<div class="letterTop"><h1>H</h1></div>
-			<div class="letterTop"><h1>É</h1></div>
-			<div class="letterTop"><h1>S</h1></div>
-			<div class="letterTop"><h1>I</h1></div>
-			<div class="letterTop"><h1>E</h1></div>
-		</div>
-		
+		<!-- Banner -->
+		<section class="banner">
+			<div class = "slogan">
+				<div class="slogan-line layer-middle">
+					<div class="letterTop"><h1>V</h1></div>
+					<div class="letterTop"><h1>O</h1></div>
+					<div class="letterTop"><h1>Y</h1></div>
+					<div class="letterTop"><h1>E</h1></div>
+					<div class="letterTop"><h1>Z</h1></div>
+				</div>
+				<br>
+				<div class="slogan-line layer-middle">
+					<div class="letterTop"><h1>L'</h1></div>
+					<div class="letterTop"><h1>I</h1></div>
+					<div class="letterTop"><h1>N</h1></div>
+					<div class="letterTop"><h1>V</h1></div>
+					<div class="letterTop"><h1>I</h1></div>
+					<div class="letterTop"><h1>S</h1></div>
+					<div class="letterTop"><h1>B</h1></div>
+					<div class="letterTop"><h1>L</h1></div>
+					<div class="letterTop"><h1>E</h1></div>
+				</div>
+			</div>
+			<div class="ban_img">
+				<img id="ban_1" src="img/ban_1.png">
+				<img id="ban_2" src="img/ban_2.png">
+				<img id="ban_3" src="img/ban_3.png">
+				<img id="ban_4" src="img/ban_4.png">
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section class="info layer-middle">
+			<div>
+				<canvas id="info_canvas"></canvas>
+			</div>
+			<div>
+				<ul>
+					<li>
+						Expo Audiovisuelle
+						<br>Voyez l’invisible
+					</li>
+					<li>
+						Arengerg Creative Mine
+						<br>59135 Wallers, France
+					</li>
+					<li>
+						2 février - 4 Février
+						<br>2023
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
 	</div>
-
-
+	<!--
+	<section class="def">
+		<div id="def_canvas"></div>
+		
+			<h2 class="element">@Synesthésie</h2>
+			<h3 class="element">Inexprimable</h3>
+			<h3 class="element">Modalité sensorielle</h3>
+			<h3 class="element">Invisible</h3>
+			<h3 class="element">Expérience</h3>
+			
+		</div>
+		<div class="clear"></div>
+	</section>
+	-->
 </body>
 
 <!-- Footer -->
@@ -60,7 +111,7 @@
 			<li><a href="mailto:"><i class="fa-regular fa-envelope fa-lg"></i><span class="label">Email</span></a></li>
 			-->
 		</ul>
-		</b>
+
 		<p>copyright &copy 2022</p>
 
 	</div>
@@ -68,5 +119,8 @@
 
 <script type="text/javascript" src="js/three.min.js"></script>
 <script type="text/javascript" src="js/animation.js"></script>
+<!--
+<script type="text/javascript" src="js/model3d.js"></script>
+-->
 
 </html>
