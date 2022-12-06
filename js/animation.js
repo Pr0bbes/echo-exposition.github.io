@@ -1,4 +1,7 @@
-//console.clear();
+console.clear();
+//alert(document.title);
+//document.html.classList.add("NoOverfloat");
+document.body.classList.add("NoOverfloat");
 
 
 //change color when il roll ------------
@@ -24,10 +27,10 @@ window.addEventListener('scroll', changeBgc);
 
 // Canvas_info ------------
 
-var canvas_info = document.getElementById("info_canvas");
-var ctx = canvas_info.getContext("2d");
-ctx.fillStyle = "#000000";
-ctx.fillRect(0, 0, 280, 68);
-ctx.fillRect(0, 82, 220, 82);
+//var canvas_info = document.getElementById("info_canvas");
+//var ctx = canvas_info.getContext("2d");
+//ctx.fillStyle = "#000000";
+//ctx.fillRect(0, 0, 280, 68);
+//ctx.fillRect(0, 82, 220, 82);
 
 
