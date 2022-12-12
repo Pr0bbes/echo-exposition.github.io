@@ -5,7 +5,9 @@
 	<title>Echo</title>
 	
 	<link rel="stylesheet" href="css/style.css" />
+	<!--
 	<link rel="stylesheet" href="css/animation.css" />
+	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Pour les icons -->
@@ -13,14 +15,15 @@
 
 </head>
 
-<body class="col_linear">
+<body id="index" class="col_linear">
 
-	<div id="first_page">
+	<div>
 		<!-- Top -->
 		<div class="top">
 			<a href="index.html"><img src="img/logo_noir.png" alt="logo_noir"></a>
+			<canvas id="menu_act"></canvas>
 			<div class="menu">
-				<ul>
+				<ul id="menu_list">
 					<li><a href="index.html">Exposition</a></li>
 					<li><a href="index_equipe.html">Notre Equipe</a></li>
 					<li><a href="index_res.html">Réservation</a></li>
@@ -115,6 +118,7 @@
 </footer>
 
 <script type="text/javascript" src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="js/animation.js"></script>
 <!--
 <script type="text/javascript" src="js/model3d.js"></script>

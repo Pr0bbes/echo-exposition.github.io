@@ -55,7 +55,9 @@ html,body {
 }
 
 .img_bg {
-	background-image: url('../img/bg_duotone.png');;
+	background-image: url('../img/bg_duotone.png');
+	background-size: 100%;
+	background-position: top;
 	background-repeat: no-repeat; 
 	background-attachment: fixed;
 }
@@ -123,12 +125,16 @@ h3 {
 	float:left;	
 }
 
+.top canvas {
+	width: 0;
+	height: 0;
+}
+
 .menu {
 	font-family: LemonMilk;
 	font-size: 1.2vw;
 	padding-top: 2vw;
 	padding: 0.5rem 0rem 1rem 0rem;
-	z-index: 10;
 }
 
 .top a {
@@ -159,6 +165,89 @@ h3 {
 			padding-right: 0;
 		}
 
+
+@media screen and (max-width: 580px) {
+	html, body {
+		z-index: 1;
+	}
+
+	#index {
+		position:fixed;
+		overflow: hidden;
+	}
+
+	.top {
+		height: 24vw;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.top img {
+		width: 20%;
+		padding: 3vw 6vw 3vw 6vw;
+	}
+
+	.menu {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		font-size: 4vw;
+		padding-top: 10vw;
+		padding-bottom: 0;
+		background-color: rgba(255, 255, 255, 1);
+		z-index: 99;
+	}
+
+	.top a {
+		text-decoration: none;
+		color: #000;
+	}
+	
+	.top a:hover {
+		color:#000;
+		border-bottom: none;
+	}
+
+	.top ul {
+
+		list-style: none;
+		float: none;
+		padding-left: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
+		.top a:hover {
+			border-bottom: none;
+		}
+
+	.top li {
+		text-align: center;
+		display: block;
+		float: none;
+		border-bottom: 2px solid #000;
+		padding-top: 3vw;
+		padding-bottom: 3vw;
+		padding-left: 0;
+		padding-right: 0;
+	}
+		.top li:last-child {
+			border-bottom: none;
+		}
+
+	.top canvas {
+		position: absolute;
+		top: 6vw;
+		right: 5vw;
+		width: 10vw;
+		height: 10vw;
+		margin: 2vw 3vw 2vw 2vw;
+		z-index: 100;
+	}
+}
 
 /* Banner */
 
@@ -284,6 +373,127 @@ h3 {
 	}
 }
 
+
+@media screen and (max-width: 580px) {
+	.banner {
+		height: 84vw;
+	}
+	.slogan {
+		position: absolute;
+		float: none;
+		left: 0;
+		top: 57vw;
+		padding-top: 0;
+		padding-bottom: 3vw;
+		padding-left: 8vw;
+		vertical-align: middle;
+		text-align: center;
+		width: 80%;
+	}
+
+
+	.slogan-line {
+		position: relative;
+		height: 10vw;
+		vertical-align: middle;
+		text-align: center;
+		width: 100%;
+	}
+
+	.letterTop h1 {
+		font-size: 10vw;
+		padding-top: 0vw;
+		
+	}
+		.letterTop h1:hover {
+			font-size: 10vw;
+			padding-top: 0vw;
+		}
+
+	#ban_1 {
+		position: absolute;
+		right: 0;
+		top: 2vw;
+		width: 100%;
+		z-index: 3;
+	}
+
+	#ban_2 {
+		width: 40%;
+		height: 18vw;
+		position: absolute;
+		left: -2vw;
+		top: 26vw;
+		z-index:5;
+		animation: ban2 1.5s;
+	}
+		#ban_2:hover {
+			left: -2vw;
+			width: 40%;
+		}
+	
+		@keyframes ban2 {
+			0% {
+				height: 0vw;
+			}
+			50% {
+				height: 0vw;
+			}
+			80% {
+				height: 18vw;
+			}
+		}
+
+	#ban_3 {
+		width: 28%;
+		position: absolute;
+		right: 0;
+		top: 18vw;
+		z-index:5;
+		animation: ban3 1.2s;
+	}
+		#ban_3:hover {
+			width: 28%;
+		}
+	
+		@keyframes ban3 {
+			0% {
+				right: -30%;
+				top: 8vw;
+			}
+			50% {
+				right: -30%;
+				top: 8vw;
+			}
+			100% {
+				right: 0;
+				top: 18vw;
+			}
+		}
+
+	#ban_4 {
+		width: 130%;
+		position: absolute;
+		right: -10%; 
+		top: 12vw; 
+		z-index: 4;
+		animation: ban4 1s;
+	}
+	
+	@keyframes ban4 {
+		from {
+			right: -110%;
+			top: -10vw;
+		}
+		to {
+			right: -10%; 
+			top:12vw; 
+		}
+	}
+
+}
+
+
 /* Expo Info */
 
 .info {
@@ -372,6 +582,87 @@ h3 {
 	height: 3.6vw;
 }
 
+@media screen and (max-width: 580px) {
+
+	.info {
+		position: relative;
+		margin-top: 5vw;
+		border-top: 3px solid #000000;
+		font-family: LemonMilk;
+		width: 100%;
+		font-size: 5vw;
+	}
+	
+	/* Icons */
+	.icons {
+		position: absolute;
+		left: 6vw;
+		top: 60vw;
+		margin-left: 2vw;
+		width: 100%;
+		height: 12vw;
+	}
+	
+	.icons ul {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+		padding-bottom: 0.8vw;
+		width: 100%;
+	}
+	
+		.icons li {
+			display: inline-block;
+			padding: 0 3vw 0 0;
+		}
+	
+			.icons li:last-child {
+				padding-right: 0;
+			}
+	
+	.icons a {
+		-moz-transition: color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
+		text-decoration: underline;
+		padding: 2vw 2.4vw 2.4vw 2.4vw;
+		border-radius: 50px;
+		color: #000000;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+	}
+	
+		.icons a:hover {
+			text-decoration: none;
+			box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+		}
+	
+	.fa-lg {
+		size: 7vw;
+	}
+	
+	.infos_text{
+		float: none;
+		display: block;
+	}
+	
+	.infos_text ul {
+		cursor: default;
+		list-style: none;
+		padding-left: 8vw;
+		float: none;
+	}
+	
+		.infos_text li {
+			display: block;
+			padding: 4vw 0 0 0;
+		}
+	
+			.infos_text li:last-child {
+				padding-right: 0vw;
+			}
+}
+
 /* Definition */
 .def {
 	margin-top: 20vw;
@@ -445,7 +736,7 @@ h3 {
 	margin: 5vw 10vw 7vw 10vw;
 	padding-left: 0;
 	padding-top: 3vw;
-	padding-bottom: 3vw;
+	padding-bottom: 4vw;
 	box-shadow: 0.7vw 0.7vw 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -477,6 +768,7 @@ h3 {
 
 .reservation button {
 	font-family: LemonMilk;
+	font-size: 1.2vw;
 	height: 3.4vw;
 	width: 50%;
 	background-color: #000;
@@ -492,6 +784,115 @@ h3 {
 	}
 
 
-.arrive_title img {
+.arrive_title {
+	color: #fff;
+	padding: 6vw 3vw 1vw 3vw;
+}
+
+.arrive_title h1{
+	margin: 0;
+	float: left;
+}
+
+.arrive_title h3 {
+	margin: 0;
+	float: left;
+	padding: 2vw 2vw 0 2vw;
+}
+
+.arrive img {
 	width: 100%;
 }
+
+@media screen and (max-width: 580px) {
+
+	.reservation {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 65vw;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
+	}
+	
+	.reservation h3 {
+		font-size: 5vw;
+		margin-top: 5vw;
+		margin-bottom: 5vw;
+	}
+	
+	.reservation ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.reservation li {
+		margin-bottom: 3vw;
+	}
+	
+	.reservation input {
+		width: 50%;
+		height: 8vw;
+		padding-left: 5px;
+		outline-style: none;;
+		border: 1px solid #ccc;
+	}
+	
+		.reservation input::placeholder {
+			color:#aaa;
+		}
+	
+	.reservation button {
+		font-family: LemonMilk;
+		font-size: 4vw;
+		height: 8vw;
+		width: 50%;
+		background-color: #000;
+		margin-top: 2vw;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+	}
+	
+		.reservation button:hover {
+			font-family: LemonMilk_bold;
+		}
+	
+	.arrive {
+		position: absolute;
+		left:0;
+		top:160vw;
+	}
+
+	.arrive_title {
+		color: #fff;
+		padding: 6vw 3vw 1vw 3vw;
+	}
+	
+	.arrive_title h1{
+		margin: 0;
+		font-size: 5vw;
+		float: none;
+		display: block;
+		padding-left: 2vw;
+	}
+	
+	.arrive_title h3 {
+		margin: 0;
+		font-size: 2.2vw;
+		float: none;
+		display: block;
+		padding: 2vw 2vw 0 2vw;
+	}
+	
+	.arrive img {
+		width: 100%;
+		margin-bottom: 10vw;
+	}
+}
+
+

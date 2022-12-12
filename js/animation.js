@@ -1,7 +1,7 @@
 console.clear();
 //alert(document.title);
 //document.html.classList.add("NoOverfloat");
-document.body.classList.add("NoOverfloat");
+$("#index").addClass("NoOverfloat");
 
 
 //change color when il roll ------------
@@ -32,5 +32,35 @@ window.addEventListener('scroll', changeBgc);
 //ctx.fillStyle = "#000000";
 //ctx.fillRect(0, 0, 280, 68);
 //ctx.fillRect(0, 82, 220, 82);
+
+
+var canvas_info = document.getElementById("menu_act");
+var ctx = canvas_info.getContext("2d");
+ctx.fillStyle = "#000000";
+ctx.fillRect(0, 0, 400, 20);
+ctx.fillRect(0,50, 400, 20);
+ctx.fillRect(0, 100, 400, 20);
+
+$("body").on("click", function(){
+  var ele = $(".menu").css("display");
+  if ( ele == "block" ) {
+    $(".menu").css("display", "none"); 
+  }
+});
+
+$("#menu_act").click(function(e) {
+  var ele = $(".menu").css("display");
+  //alert( "Handler for .click() called." );
+  if ( ele == "none" ) {
+    $(".menu").css("display", "block");
+  } else {
+    $(".menu").hide(); 
+  }
+  e.stopPropagation();
+});
+
+
+
+
 
 
