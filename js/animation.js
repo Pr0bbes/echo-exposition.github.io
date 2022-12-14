@@ -86,7 +86,7 @@ if (winWidth <= 580 && winHeight >=800){
   $("#index").css("height", winHeight);
 }
 
-var indexHeight = $("#refHeight").outerHeight();
+var indexHeight = $("#index").outerHeight();
 if (indexHeight >= winHeight) {
   $("#index").css("height", indexHeight);
 } else {

@@ -18,6 +18,8 @@ html,body {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	background: #000;
 	background: -webkit-linear-gradient(-10deg, #EFBAF3 0%, #A1D6F7 100%);
 	background: linear-gradient(-10deg, #EFBAF3 0%, #A1D6F7 100%);
@@ -398,7 +400,7 @@ h3 {
 
 	.slogan-line {
 		position: relative;
-		height: 10vw;
+		height: 11vw;
 		vertical-align: middle;
 		text-align: center;
 		width: 100%;
@@ -605,7 +607,7 @@ h3 {
 		top: 60vw;
 		margin-left: 2vw;
 		width: 100%;
-		height: 12vw;
+		height: 13vw;
 	}
 	
 	.icons ul {
