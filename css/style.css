@@ -18,11 +18,12 @@ html,body {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	background: #EFBAF3;
+	background: #000;
 	background: -webkit-linear-gradient(-10deg, #EFBAF3 0%, #A1D6F7 100%);
 	background: linear-gradient(-10deg, #EFBAF3 0%, #A1D6F7 100%);
 	transition: 1s ease-in-out;
 }
+
 
 .NoOverfloat {
 	overflow: hidden;
@@ -172,8 +173,11 @@ h3 {
 	}
 
 	#index {
+		/*
 		position:fixed;
+		*/
 		overflow: hidden;
+		height: 810px;
 	}
 
 	.top {
@@ -183,7 +187,7 @@ h3 {
 	}
 
 	.top img {
-		width: 20%;
+		width: 18%;
 		padding: 3vw 6vw 3vw 6vw;
 	}
 
@@ -242,8 +246,8 @@ h3 {
 		position: absolute;
 		top: 6vw;
 		right: 5vw;
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		margin: 2vw 3vw 2vw 2vw;
 		z-index: 100;
 	}
@@ -499,6 +503,7 @@ h3 {
 .info {
 	position: relative;
 	margin-top: 8vw;
+	padding-bottom: 0.5vw;
 	border-top: 3px solid #000000;
 	font-family: LemonMilk;
 	width: 100%;
@@ -512,7 +517,7 @@ h3 {
 	top: 1vw;
 	margin-left: 2vw;
 	width: 20%;
-	height: 12vw;
+
 }
 
 .icons ul {

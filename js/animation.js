@@ -1,11 +1,12 @@
 console.clear();
 //alert(document.title);
 //document.html.classList.add("NoOverfloat");
-$("#index").addClass("NoOverfloat");
+// $("#index").addClass("NoOverfloat");
 
 
 //change color when il roll ------------
 
+/*
 function changeBgc() {
   if (this.scrollY >= window.screen.height/2) {
     if (this.scrollY >= window.screen.height*1.5) {
@@ -23,7 +24,7 @@ function changeBgc() {
 }
 
 window.addEventListener('scroll', changeBgc);
-
+*/
 
 // Canvas_info ------------
 
@@ -59,8 +60,38 @@ $("#menu_act").click(function(e) {
   e.stopPropagation();
 });
 
+// Max value of the block Reservation
+var res = $(".reservation").outerHeight(); 
+//alert(res);
+if (res >= 430) {
+  $(".reservation").css("width", "349px");
+  $(".reservation").css("margin", "59px 118px 83px 118px");
+  $(".reservation").css("padding-top", "35.5px");
+  $(".reservation").css("padding-bottom", "47.4px");
+  $(".reservation").children("h3").css("margin-bottom", "35.5px");
+  $(".reservation").children("h3").css("font-size", "16px");
+  $(".reservation").children("ul").children("li").css("margin-bottom", "23.7px");
+  $(".reservation").children("ul").children("li").css("width", "349px");
+  $(".reservation").children("ul").children("li").css("height", "30.8px");
+  $(".reservation").children("ul").children("li").children("input").css("width", "174.5px");
+  $(".reservation").children("ul").children("li").children("input").css("height", "30.8px");
+  $(".reservation").children("button").css("width", "162.5px");
+  $(".reservation").children("button").css("height", "38.3px");
+  $(".reservation").children("button").css("font-size", "14px");
+}
 
+var winWidth = $(window).width();
+var winHeight = $(window).height();
+if (winWidth <= 580 && winHeight >=800){
+  $("#index").css("height", winHeight);
+}
 
+var indexHeight = $("#refHeight").outerHeight();
+if (indexHeight >= winHeight) {
+  $("#index").css("height", indexHeight);
+} else {
+  $("#index").css("height", winHeight);
+}
 
 
 
