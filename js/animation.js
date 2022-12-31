@@ -42,12 +42,8 @@ ctx.fillRect(0, 0, 400, 20);
 ctx.fillRect(0,50, 400, 20);
 ctx.fillRect(0, 100, 400, 20);
 
-$("body").on("click", function(){
-  var ele = $(".menu").css("display");
-  if ( ele == "block" ) {
-    $(".menu").css("display", "none"); 
-  }
-});
+
+
 
 $("#menu_act").click(function(e) {
   var ele = $(".menu").css("display");
@@ -58,6 +54,14 @@ $("#menu_act").click(function(e) {
     $(".menu").hide(); 
   }
   e.stopPropagation();
+});
+
+$("body").on("click", function(){
+  var winWidth = $(window).width();
+  var ele = $(".menu").css("display");
+  if ( ele == "block" && winWidth <= 580 ) {
+    $(".menu").hide(); 
+  }
 });
 
 // Max value of the block Reservation
