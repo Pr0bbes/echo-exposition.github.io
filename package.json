@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Pr0bbes/echo-exposition.github.io#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "firebase": "^9.14.0"
   }
 }

@@ -2,49 +2,124 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Echo Exposition</title>
+	<title>Echo</title>
 	
 	<link rel="stylesheet" href="css/style.css" />
+	<!--
+	<link rel="stylesheet" href="css/animation.css" />
+	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Pour les icons -->
 	<script src="https://kit.fontawesome.com/2b719bd935.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
+<body id="index" class="col_linear">
 
-	<div>
-		<section class="align-center menu">
-			<h1>Echo Exposition</h1>
+	<div id="refHeight">
+		<!-- Top -->
+		<div class="top">
+			<a href="index.html"><img src="img/logo_noir.png" alt="logo_noir"></a>
+			<canvas id="menu_act"></canvas>
+			<div class="menu" id="menu"	>
+				<ul id="menu_list">
+					<li><a href="index.html">Exposition</a></li>
+					<li><a href="index_equipe.html">Notre Equipe</a></li>
+					<li><a href="res.html">Réservation</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Banner -->
+		<section class="banner">
+			<div class = "slogan">
+				<div class="slogan-line">
+					<div class="letterTop"><h1>V</h1></div>
+					<div class="letterTop"><h1>O</h1></div>
+					<div class="letterTop"><h1>Y</h1></div>
+					<div class="letterTop"><h1>E</h1></div>
+					<div class="letterTop"><h1>Z</h1></div>
+				</div>
+				<br>
+				<div class="slogan-line">
+					<div class="letterTop"><h1>L'</h1></div>
+					<div class="letterTop"><h1>I</h1></div>
+					<div class="letterTop"><h1>N</h1></div>
+					<div class="letterTop"><h1>V</h1></div>
+					<div class="letterTop"><h1>I</h1></div>
+					<div class="letterTop"><h1>S</h1></div>
+					<div class="letterTop"><h1>I</h1></div>
+					<div class="letterTop"><h1>B</h1></div>
+					<div class="letterTop"><h1>L</h1></div>
+					<div class="letterTop"><h1>E</h1></div>
+				</div>
+			</div>
+			<div class="ban_img">
+				<img id="ban_1" src="img/ban_1.png">
+				<img id="ban_2" src="img/ban_2.png">
+				<img id="ban_3" src="img/ban_3.png">
+				<img id="ban_4" src="img/ban_4.png">
+			</div>
+			<div class="clear"></div>
 		</section>
 
-		<!-- Bannder -->
-		<section class="banner">
-			<div>
-				<img class='ban' src='img/ban.png'> </img>
+		<section class="info">
+			<div class="infos_text">
+				<ul>
+					<li>
+						Expo Audiovisuelle
+						<br>Voyez l’invisible
+					</li>
+					<li>
+						Arenberg Creative Mine
+						<br>59135 Wallers, France
+					</li>
+					<li>
+						3 février - 5 Février
+						<br>2023
+					</li>
+				</ul>
 			</div>
+			<div class="icons">
+				<ul>
+					<li><a href="https://www.facebook.com/profile.php?id=100087387082669"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+					<li><a href="https://instagram.com/exposition_echo?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-square-instagram fa-lg"></i></a></li>
+					<li><a href=""><i class="fa-brands fa-tiktok fa-lg"></i></a></li>
+				</ul>	
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
 		</section>
 	</div>
-
-
+	<!--
+	<section class="def">
+		<div id="def_canvas"></div>
+		
+			<h2 class="element">@Synesthésie</h2>
+			<h3 class="element">Inexprimable</h3>
+			<h3 class="element">Modalité sensorielle</h3>
+			<h3 class="element">Invisible</h3>
+			<h3 class="element">Expérience</h3>
+			
+		</div>
+		<div class="clear"></div>
+	</section>
+	
+	<section class="footer">
+		<div class="inner">
+			<p>copyright &copy 2022</p>
+		</div>
+	</section>
+	-->
 </body>
 
 <!-- Footer -->
-<footer>
-	<div class="inner">
-		<ul class="icons">
-			<li><a href="https://www.facebook.com/profile.php?id=100087387082669"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-			<li><a href="https://instagram.com/exposition_echo?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-square-instagram fa-lg"></i></a></li>
-			<!--fa-brands fa-instagram-->
-			<li><a href=""><i class="fa-brands fa-tiktok fa-lg"></i></a></li>
-			<!--
-			<li><a href="mailto:"><i class="fa-regular fa-envelope fa-lg"></i><span class="label">Email</span></a></li>
-			-->
-		</ul>
-		</b>
-		<p>copyright &copy 2022</p>
 
-	</div>
+<footer>
 </footer>
+
+<script type="text/javascript" src="animation.js"></script>
+
 
 </html>

@@ -11,13 +11,58 @@
 }
 
 
-
 /* Elements base */
 
-body{
-	height:100vh;
-	/* background: rgb(0,0,0); */
-	background: linear-gradient(-10deg, #EA5D5D 0%, #EFBAF3 70%, #A1D6F7 100%);
+html,body {	
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #000;
+	background: -webkit-linear-gradient(-10deg, #EFBAF3 0%, #A1D6F7 100%);
+	background: linear-gradient(-10deg, #EFBAF3 0%, #A1D6F7 100%);
+	transition: 1s ease-in-out;
+}
+
+
+.NoOverfloat {
+	overflow: hidden;
+}
+
+.col_linear {
+	background: #EFBAF3;
+	background: -webkit-linear-gradient(-10deg, #EFBAF3 0%, #A1D6F7 100%);
+	background: linear-gradient(-10deg,#EFBAF3 0%, #A1D6F7 100%);
+}
+
+.col_white {
+	background: #fff;
+}
+
+.col_black {
+	background: #000;
+}
+
+.col_bleu {
+	background: #A1D6F7;
+}
+
+.col_red {
+    background: #EA5D5D;
+}
+
+.col_yellow {
+    background: #F9EE8B;
+}
+
+.img_bg {
+	background-image: url('../img/bg_duotone.png');
+	background-size: 100%;
+	background-position: top;
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
 }
 
 h1, h2, h3{
@@ -29,26 +74,16 @@ h1, h2, h3{
 }
 
 h1 {
-	font-size: 3.0rem;
+	font-size: 5vw;
 }
 
-a {
-	-moz-transition: color 0.2s ease-in-out;
-	-webkit-transition: color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out;
-	transition: color 0.2s ease-in-out;
-	text-decoration: underline;
-	padding: 1rem;
-	border-radius: 50px;
-	color: #000000;
-	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+h2 {
+	font-size: 3vw;
 }
 
-	a:hover {
-		text-decoration: none;
-		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
-	}
-
+h3 {
+	font-size: 1.3vw;
+}
 
 .align-left {
 	text-align: left;
@@ -62,8 +97,8 @@ a {
 	text-align: right;
 }
 
-.menu{
-	padding: 0.5rem 0rem 1rem 0rem;
+.clear {
+	clear: both;
 }
 
 .ban{
@@ -80,28 +115,1054 @@ a {
 			width: 100%;
 }
 
+/* Top */
+.top {
+	position: relative;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	height: 10vw;
+}
 
-footer {
-	padding: 2.5rem 0rem 0.5rem 0rem;
+.top img {
+	width: 10%;
+	float:left;	
+}
+
+.top canvas {
+	width: 0;
+	height: 0;
+}
+
+.menu {
+	font-family: LemonMilk;
+	font-size: 1.2vw;
+	padding-top: 2vw;
+	padding: 0.5rem 0rem 1rem 0rem;
+}
+
+.top a {
+	text-decoration: none;
+	color:rgba(0, 0, 0);
+}
+
+.top a:hover {
+	color:rgba(0, 0, 0);
+	border-bottom: 14px solid #000000;
+}
+
+.top ul {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+	padding-bottom: 0.8rem;
+	float: right;
+	border-bottom: 3px solid #000000;
+}
+
+	.top li {
+		display: inline-block;
+		padding: 0 2rem 0 0;
+	}
+
+		.top li:last-child {
+			padding-right: 0;
+		}
+
+
+@media screen and (max-width: 580px) {
+	html, body {
+		z-index: 1;
+	}
+
+	#index {
+		/*
+		position:fixed;
+		*/
+		overflow: hidden;
+		height: 810px;
+	}
+
+	.top {
+		height: 24vw;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.top img {
+		width: 18%;
+		padding: 3vw 6vw 3vw 6vw;
+	}
+
+	.menu {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		font-size: 4vw;
+		padding-top: 10vw;
+		padding-bottom: 0;
+		background-color: rgba(255, 255, 255, 1);
+		z-index: 99;
+	}
+
+	.top a {
+		text-decoration: none;
+		color: #000;
+	}
+	
+	.top a:hover {
+		color:#000;
+		border-bottom: none;
+	}
+
+	.top ul {
+
+		list-style: none;
+		float: none;
+		padding-left: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
+		.top a:hover {
+			border-bottom: none;
+		}
+
+	.top li {
+		text-align: center;
+		display: block;
+		float: none;
+		border-bottom: 2px solid #000;
+		padding-top: 3vw;
+		padding-bottom: 3vw;
+		padding-left: 0;
+		padding-right: 0;
+	}
+		.top li:last-child {
+			border-bottom: none;
+		}
+
+	.top canvas {
+		position: absolute;
+		top: 6vw;
+		right: 5vw;
+		width: 8vw;
+		height: 8vw;
+		margin: 2vw 3vw 2vw 2vw;
+		z-index: 100;
+	}
+}
+
+/* Banner */
+
+.banner {
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.slogan {
+	position: relative;
+	float: left;	
+	padding-top: 6vw;
+	padding-bottom: 3vw;
+	padding-left: 2vw;
+	vertical-align: middle;
+	text-align: center;
+	width: 45%;
+}
+
+.slogan-line {
+	position: relative;
+	height: 8.4vw;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+}
+
+.letterTop {	
+	float: left;
+}
+
+.letterTop h1 {
+	font-family: LemonMilk_bold;
+	font-size: 5vw;
+	margin: 0rem;
+	padding-top: 0.8vw;
+	
+}
+	.letterTop h1:hover {
+		font-size: 6vw;
+		padding-top: 0rem;
+	}
+
+#ban_1 {
+	position: absolute;
+	right: 0;
+	top: 5vw;
+	width: 44%;
+	z-index: 3;
+}
+
+#ban_2 {
+	width: 14%;
+	height: 7.4vw;
+	position: absolute;
+	right: 29vw;
+	top: 16.5vw;
+	z-index:5;
+	animation: ban2 1.5s;
+}
+	#ban_2:hover {
+		right: 28.4vw;
+		width: 15%;
+	}
+
+	@keyframes ban2 {
+		0% {
+			height: 0vw;
+		}
+		50% {
+			height: 0vw;
+		}
+		80% {
+			height: 7.6vw;
+		}
+	}
+
+#ban_3 {
+	width: 12%;
+	position: absolute;
+	right: 0;
+	top: 11vw;
+	z-index:5;
+	animation: ban3 1.2s;
+}
+	#ban_3:hover {
+		width: 13%;
+	}
+
+	@keyframes ban3 {
+		0% {
+			right: -14%;
+			top: 8vw;
+		}
+		50% {
+			right: -14%;
+			top: 8vw;
+		}
+		100% {
+			right: 0;
+			top: 11vw;
+		}
+	}
+
+#ban_4 {
+	width: 50%;
+	position: absolute;
+	right:0; 
+	top:11vw; 
+	z-index: 4;
+	animation: ban4 0.6s;
+}
+
+@keyframes ban4 {
+	from {
+		right: -50%;
+		top: 4vw;
+	}
+	to {
+		right:0; 
+		top:11vw; 
+	}
+}
+
+
+@media screen and (max-width: 580px) {
+	.banner {
+		height: 84vw;
+	}
+	.slogan {
+		position: absolute;
+		float: none;
+		left: 0;
+		top: 57vw;
+		padding-top: 0;
+		padding-bottom: 3vw;
+		padding-left: 8vw;
+		vertical-align: middle;
+		text-align: center;
+		width: 80%;
+	}
+
+
+	.slogan-line {
+		position: relative;
+		height: 11vw;
+		vertical-align: middle;
+		text-align: center;
+		width: 100%;
+	}
+
+	.letterTop h1 {
+		font-size: 10vw;
+		padding-top: 0vw;
+		
+	}
+		.letterTop h1:hover {
+			font-size: 10vw;
+			padding-top: 0vw;
+		}
+
+	#ban_1 {
+		position: absolute;
+		right: 0;
+		top: 2vw;
+		width: 100%;
+		z-index: 3;
+	}
+
+	#ban_2 {
+		width: 40%;
+		height: 18vw;
+		position: absolute;
+		left: -2vw;
+		top: 26vw;
+		z-index:5;
+		animation: ban2 1.5s;
+	}
+		#ban_2:hover {
+			left: -2vw;
+			width: 40%;
+		}
+	
+		@keyframes ban2 {
+			0% {
+				height: 0vw;
+			}
+			50% {
+				height: 0vw;
+			}
+			80% {
+				height: 18vw;
+			}
+		}
+
+	#ban_3 {
+		width: 28%;
+		position: absolute;
+		right: 0;
+		top: 18vw;
+		z-index:5;
+		animation: ban3 1.2s;
+	}
+		#ban_3:hover {
+			width: 28%;
+		}
+	
+		@keyframes ban3 {
+			0% {
+				right: -30%;
+				top: 8vw;
+			}
+			50% {
+				right: -30%;
+				top: 8vw;
+			}
+			100% {
+				right: 0;
+				top: 18vw;
+			}
+		}
+
+	#ban_4 {
+		width: 130%;
+		position: absolute;
+		right: -10%; 
+		top: 12vw; 
+		z-index: 4;
+		animation: ban4 1s;
+	}
+	
+	@keyframes ban4 {
+		from {
+			right: -110%;
+			top: -10vw;
+		}
+		to {
+			right: -10%; 
+			top:12vw; 
+		}
+	}
+
+}
+
+
+/* Expo Info */
+
+.info {
+	position: relative;
+	margin-top: 8vw;
+	padding-bottom: 0.5vw;
+	border-top: 3px solid #000000;
+	font-family: LemonMilk;
+	width: 100%;
+	font-size: 1.3vw;
 }
 
 /* Icons */
+.icons {
+	position: absolute;
+	left: 2vw;
+	top: 1vw;
+	margin-left: 2vw;
+	width: 20%;
 
-ul.icons {
+}
+
+.icons ul {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+	padding-bottom: 0.8vw;
+	width: 100%;
+}
+
+	.icons li {
+		display: inline-block;
+		padding: 0 1vw 0 0;
+	}
+
+		.icons li:last-child {
+			padding-right: 0;
+		}
+
+.icons a {
+	-moz-transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+	text-decoration: underline;
+	padding: 1vw 1.1vw;
+	border-radius: 50px;
+	color: #000000;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+	.icons a:hover {
+		text-decoration: none;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+	}
+
+.fa-lg {
+	size: 5vw;
+}
+
+.infos_text{
+	float: right;
+
+}
+
+.infos_text ul {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+	float: right;
+}
+
+	.infos_text li {
+		display: inline-block;
+		padding: 0 9.4vw 0 0;
+	}
+
+		.infos_text li:last-child {
+			padding-right: 2vw;
+		}
+
+#info_canvas {
+	position: absolute;
+	left: 2vw;
+	top: 1.4vw;
+	width: 20vw;
+	height: 3.6vw;
+}
+
+@media screen and (max-width: 580px) {
+
+	.info {
+		position: relative;
+		margin-top: 5vw;
+		border-top: 3px solid #000000;
+		font-family: LemonMilk;
+		width: 100%;
+		font-size: 5vw;
+	}
+	
+	/* Icons */
+	.icons {
+		position: absolute;
+		left: 6vw;
+		top: 60vw;
+		margin-left: 2vw;
+		width: 100%;
+		height: 13vw;
+	}
+	
+	.icons ul {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+		padding-bottom: 0.8vw;
+		width: 100%;
+	}
+	
+		.icons li {
+			display: inline-block;
+			padding: 0 3vw 0 0;
+		}
+	
+			.icons li:last-child {
+				padding-right: 0;
+			}
+	
+	.icons a {
+		-moz-transition: color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
+		text-decoration: underline;
+		padding: 2vw 2.4vw 2.4vw 2.4vw;
+		border-radius: 50px;
+		color: #000000;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+	}
+	
+		.icons a:hover {
+			text-decoration: none;
+			box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+		}
+	
+	.fa-lg {
+		size: 7vw;
+	}
+	
+	.infos_text{
+		float: none;
+		display: block;
+	}
+	
+	.infos_text ul {
+		cursor: default;
+		list-style: none;
+		padding-left: 8vw;
+		float: none;
+	}
+	
+		.infos_text li {
+			display: block;
+			padding: 4vw 0 0 0;
+		}
+	
+			.infos_text li:last-child {
+				padding-right: 0vw;
+			}
+}
+
+/* Definition */
+.def {
+	margin-top: 20vw;
+}
+
+#def_canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: solid 1px #000;
+	z-index: 100;
+
+}
+
+/* Footer */
+.footer {
+	margin-top: 1vw;
+	padding: 0.5vw 0vw 0.5vw 0vw;
+	font-size: 1.5vw;
+}
+
+/* Organisation */
+
+.organisation {
+	margin-top: 2vw;
+}
+
+.organisation h3 {
+	width: 40%;
+	text-align: end;
+	float: right;
+	margin-right: 2vw;
+	color: #fff;
+	padding: 1vw;
+	background-color: #000;
+}
+
+.organisation img {
+	width: 100%
+}
+
+.collaborateur {
+	margin-top: 4vw;
+	width: 100%;
+}
+
+
+.collaborateur img {
+	height: 5.4vw;
+}
+
+.collaborateur ul {
+	width: 100%;
+	height: 6.4vw;
+	position: relative;
 	cursor: default;
 	list-style: none;
 	padding-left: 0;
 	padding-bottom: 0.8rem;
 }
 
-	ul.icons li {
-		display: inline-block;
-		padding: 0 1rem 0 0;
+.collaborateur li{
+	width: 24%;
+	float: left;
+}
+
+.reservation {
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	width: 70%;
+	height: 80%;
+	/* margin-top: 5vw; */
+	margin-right: 10vw;
+	/* margin-bottom: 7vw; */
+	margin-left:10vw;
+	padding-left: 0;
+	padding-top: 3vw;
+	padding-bottom: 4vw;
+	box-shadow: 0.7vw 0.7vw 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.reservation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.reservation li {
+	margin-bottom: 1vw;
+}
+
+.reservation input {
+	width: 50%;
+	height: 2.6vw;
+	padding-left: 5px;
+	outline-style: none;;
+	border: 1px solid #ccc;
+}
+
+.reservation input::placeholder {
+	color:#aaa;
+}
+
+.reservation select {
+	width: 51%;
+	height: 2.6vw;
+	padding-left: 5px;
+	outline-style: none;;
+	border: 1px solid #ccc;
+	background-color: white;
+	color:black;
+}
+
+.reservation button {
+	font-family: LemonMilk;
+	font-size: 1.2vw;
+	height: 3.4vw;
+	width: 50%;
+	background-color: #000;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	/* margin-left: 25%; */
+}
+
+	.reservation button:hover {
+		font-family: LemonMilk_bold;
 	}
 
-		ul.icons li:last-child {
-			padding-right: 0;
+.arrive_title {
+	color: #fff;
+	padding: 6vw 3vw 1vw 3vw;
+}
+
+.arrive_title h1{
+	margin: 0;
+	float: left;
+}
+
+.arrive_title h3 {
+	margin: 0;
+	float: left;
+	padding: 2vw 2vw 0 2vw;
+}
+
+.arrive img {
+	width: 100%;
+}
+
+.annuler {
+	/* padding-top: 5vh; */
+	font-size: 0.9vw;
+}
+
+.annuler button {
+	font-family: LemonMilk;
+	font-size: 0.8vw;
+	height: 2.0vw;
+	width: 20%;
+	background-color: #111;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 0%;
+}
+
+
+.reservation_infos{
+	grid-column: 2;
+	grid-row:1;
+	width: 50%;
+	height: 80%;
+	/* margin-top: 6vh; */
+	margin-left:10vw;
+	/* padding-top: 3vw; */
+	/* padding-bottom: 4vw; */
+	box-shadow: 0.7vw 0.7vw 3px rgba(0, 0, 0, 0.1);
+	background-color: white;
+	text-align: center;
+	visibility: hidden;
+	font-family: LemonMilk;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	height: 120vh;
+}
+
+.reservation_infoText{
+	margin:10%;
+}
+
+.reservation_mail{
+	width: 50%;
+	height: 2.6vw;
+	padding-left: 5px;
+	/* margin-bottom: 3vh; */
+	outline-style: none;;
+	border: 1px solid #ccc;
+}
+
+.CGUCheckTxt{
+	font-size: 0.9vw;
+}
+
+#CGUCheck{
+	height:3vh;
+	width: 3vh;
+	margin-left: 1vw;
+	accent-color: red;
+}
+
+#NavCheck{
+	height:3vh;
+	width: 3vh;
+	margin-left: 1vw;
+	accent-color: red;
+}
+
+#usersTable, th, td{
+	border: 1px solid;
+}
+
+#selectNav{
+	visibility: collapse;
+}
+
+.boutonReserver{
+	font-family: LemonMilk;
+	font-size: 0.8vw;
+	height: 4vh;
+	width: 50%;
+	background-color: #000;
+	margin-top: 2vw;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 0%;
+	margin-top: 5vh;
+}
+
+.reservation_Navette{
+	grid-column: 2;
+	grid-row:2;
+	width: 50%;
+	height: 100%;
+	margin-top: -10vh;
+	margin-left:10vw;
+
+	box-shadow: 0.7vw 0.7vw 3px rgba(0, 0, 0, 0.1);
+	background-color: white;
+	text-align: center;
+	visibility: hidden;
+	font-family: LemonMilk;
+}
+
+#reservation_buttonAnnulerRetourA{
+	visibility: hidden;
+}
+
+#reservation_buttonAnnulerRetourN{
+	visibility: hidden;
+}
+
+.ReserverSelect{
+	width: 51%;
+	height: 2.6vw;
+	padding-left: 5px;
+	margin-top: 1vh;
+	outline-style: none;;
+	border: 1px solid #ccc;
+	background-color: white;
+	color:black;
+}
+
+@media screen and (max-width: 580px) {
+
+	.CGUCheckTxt{
+		font-size: 3vw;
+	}
+	
+	#CGUCheck{
+		height:2vh;
+		width: 2vh;
+		margin-left: 1vw;
+		accent-color: red;
+	}
+
+	#NavCheck{
+		height:2vh;
+		width: 2vh;
+		margin-left: 1vw;
+		accent-color: red;
+	}
+
+	.reservation {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 70vw;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
+		height:100%;
+	}
+	
+	.reservation h3 {
+		font-size: 5vw;
+		margin-top: 5vw;
+		margin-bottom: 5vw;
+	}
+	
+	.reservation ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.reservation li {
+		margin-bottom: 3vw;
+	}
+	
+	.reservation input {
+		width: 50%;
+		height: 8vw;
+		padding-left: 5px;
+		outline-style: none;;
+		border: 1px solid #ccc;
+	}
+	
+		.reservation input::placeholder {
+			color:#aaa;
 		}
+	
+	.reservation button {
+		font-family: LemonMilk;
+		font-size: 4vw;
+		height: 8vw;
+		width: 50%;
+		background-color: #000;
+		margin-top: 2vw;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 0%;
+	}
+	.reservation select {
+		width: 51%;
+		height: 2.6vh;
+		padding-left: 5px;
+		outline-style: none;;
+		border: 1px solid #ccc;
+		background-color: white;
+		color:black;
+	}
+	
+		.reservation button:hover {
+			font-family: LemonMilk_bold;
+		}
+	
+	.arrive {
+		position: absolute;
+		left:0;
+		top:240vw;
+	}
 
+	.arrive_title {
+		color: #fff;
+		padding: 6vw 3vw 1vw 3vw;
+	}
+	
+	.arrive_title h1{
+		margin: 0;
+		font-size: 5vw;
+		float: none;
+		display: block;
+		padding-left: 2vw;
+	}
+	
+	.arrive_title h3 {
+		margin: 0;
+		font-size: 2.2vw;
+		float: none;
+		display: block;
+		padding: 2vw 2vw 0 2vw;
+	}
+	
+	.arrive img {
+		width: 100%;
+		margin-bottom: 10vw;
+	}
 
+	.grid{
+		display: block;
+		grid-template-rows: 50% 50%;
+		grid-auto-columns: auto;
+		height: 100%;
+	}
 
+	.annuler {
+		padding-top: 3vh;
+		font-size: 4vw;
+	}
+	
+	.annuler button {
+		font-family: LemonMilk;
+		font-size: 2.5vw;
+		height: 5vw;
+		width: 30%;
+		background-color: #111;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 0%;
+	}
+
+	.reservation_infos{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 70vw;
+		padding-top: 20vh;
+		margin: 0;
+		box-shadow: none;
+		height:100%;
+	}
+
+	#reservation_buttonAnnulerConfirmer{
+		font-family: LemonMilk;
+		font-size: 4vw;
+		height: 8vw;
+		width: 50%;
+		background-color: #000;
+		margin-top: 8vw;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 0%;
+		visibility: hidden;
+		font-size: 2vw;
+	}
+	
+	.reservation_infoText{
+		margin:10%;
+	}
+	
+	.reservation_mail{
+		width: 50%;
+		height: 8vw;
+		padding-left: 5px;
+		outline-style: none;;
+		border: 1px solid #ccc;
+	}
+
+	.boutonReserver{
+		font-size: 2.4vw;
+		margin-top: 3vh;
+	}
+
+	.reservation_Navette{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 70vw;
+		padding-top: 10vh;
+		margin: 0;
+		box-shadow: none;
+		height:100%;
+	}
+
+	.ReserverSelect{
+		width: 50%;
+		height: 8vw;
+		padding-left: 5px;
+		outline-style: none;;
+		border: 1px solid #ccc;
+		margin-top: 2vh;
+	}
+}

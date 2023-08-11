@@ -1,33 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html class="col_white">
 <head>
 	<meta charset="utf-8" />
-	<title>Echo Exposition</title>
+	<title>Echo Reservation</title>
 	
 	<link rel="stylesheet" href="css/style.css" />
+	<!--
+	<link rel="stylesheet" href="css/animation.css" />
+	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-	<!-- Banner -->
-	<section class="banner">
-		<div>
-			<img src='img/ban.png' 
-			style="width:30%;
-			text-align:center;display: block;
-			margin-left: auto;
-			margin-right: auto;"> </img>
+<body class="img_bg">
+	<div>
+		<!-- Top -->
+		<div class="top">
+			<a href="index.html"><img src="img/logo_noir.png" alt="logo_noir"></a>
+			<canvas id="menu_act"></canvas>
+			<div class="menu" id="menu">
+				<ul id="menu_list">
+					<li><a href="index.html">Exposition</a></li>
+					<li><a href="index_equipe.html">Notre Equipe</a></li>
+					<li><a href="index_res.html">Réservation</a></li>
+				</ul>
+			</div>
 		</div>
-	</section>
+
+		<!-- Table Rerservation -->
+		<section>
+		<div class="grid">
+			<div class="reservation col_white inner">
+				<h3>Réservez une place <br> en une seule étape</h3>
+				<ul>
+					<li><input type="text" id="usr_prenom" name="prenom" required placeholder="Prénom"></li>
+					<li><input type="text" id="usr_nom" name="nom" required placeholder="Nom"></li>
+					<li><input type="email" id="usr_email" name="email" required placeholder="Email"></li>
+					<li><input type="confemail" id="usr_confemail" name="confemail" required placeholder="Confirmer email"></li>
+					<li><select id="selectNombre">
+						<option selected value="null" disabled>Visiteurs</option>
+						<option value=1>1</option>
+						<option value=2>2</option>
+						<option value=3>3</option>
+						<option value=4>4</option>
+						<option value=5>5</option>
+					</select> </li>
+					<li><select id="selectDate" disabled>
+						<option selected value="null" disabled>Date</option>
+						<option value="2023-02-03">Vendredi 3 Fevrier 2023</option>
+						<option value="2023-02-04">Samedi 4 Fevrier 2023</option>
+						<option value="2023-02-05">Dimanche 5 Fevrier 2023</option>
+					</select> </li>
+					<li><select id="selectHeure" disabled>
+						<option value="">Horaire</option>
+					</select></li>
+					
+					<li><div class="CGUCheckTxt" id="CGUCheckTxtID" >J'accepte les <a href="CGU.html" target="_blank">conditions générales d'utilisation</a> du site<input type="checkbox" id="CGUCheck" ></div></li>
+					
+				
+					<li><button type="button" id="buttonsubmit"> Réserver </button></li>
+					<li><div class="annuler">
+					Vous souhaitez annuler votre réservation ? Cliquez ici   <button type="button" id="buttonannuler"> Annuler </button>
+					</div></li>
+					<li><div class="annuler">
+					Vous souhaitez reserver une navette gratuite ? Cliquez ici   <button type="button" id="buttonNavette"> Navette </button>
+					</div></li>
+				</ul>
+			</div>
+			<div class="reservation_infos" id="reservation_infosID">
+				<div class="reservation_infoText" id="reservation_infoTextID">Il manque un nom</div>
+				<input type="text" class="reservation_mail" id="reservation_mailAnnuler" required placeholder="email">
+				<button type="button" class="boutonReserver" id="reservation_buttonAnnulerConfirmer">Annuler la reservation</button>
+				<button type="button" class="boutonReserver" id="reservation_buttonAnnulerRetourA">Retour</button>
+			</div>
+			<div class="reservation_Navette" id="reservation_NavetteID">
+				<div class="reservation_infoText" id="reservation_NavetteTextID">Renseignez votre email d'inscription</div>
+				<input type="text" class="reservation_mail" id="reservation_mailNavette" required placeholder="email">
+				<select class = "ReserverSelect" id="selectDateAller" >
+					<option selected value="null" disabled> Date Aller</option>
+					<option value="2023-02-03">Vendredi 3 (Place du Hainaut)</option>
+					<option value="2023-02-04">Samedi 4 (Université)</option>
+					<option value="2023-02-05">Dimanche 5 (Place du Hainaut)</option>
+				</select><br>
+				<select class = "ReserverSelect" id="selectHeureAller" disabled >
+					<option selected value="null" disabled>Heure Aller</option>
+				</select><br>
+				<select class = "ReserverSelect" id="selectDateRetour" >
+					<option selected value="null" disabled> Date Retour</option>
+					<option value="2023-02-03">Vendredi 3 (Arenberg)</option>
+					<option value="2023-02-04">Samedi 4 (Arenberg)</option>
+					<option value="2023-02-05">Dimanche 5 (Arenberg)</option>
+				</select><br>
+				<select class = "ReserverSelect" id="selectHeureRetour" disabled>
+					<option selected value="null" disabled>Heure Retour</option>
+				</select><br>
+				<button type="button" class="boutonReserver" id="reservation_buttonNavetteConfirmer">Reserver la navette</button><br><br>
+				<button type="button" class="boutonReserver" id="reservation_buttonAnnulerRetourN">Retour</button>
+			</div>
+		</div>
+		</section>
+
+		<section>
+			<div class="arrive">
+				<div class="arrive_title col_black">
+					<h1>Accès</h1>
+					<h3>Découvrez la meilleure façon pour vous rendre à Arenberg, <br>
+						et où garer votre vélo ou votre voiture!</h3>
+						<div class="clear"></div>
+				</div>
+
+				<div class="col_white">
+					<img src="img/transport.png">
+				</div>
+			</div>
+		</section>
+	</div>
+
 	
-	<input type="text" id="input"> <br>
-	<button type="button" id="buttonsubmit"> submit </button>
-	<h5 id="test"></h5>
-
-<p id="demo"></p>
-
-<script type="module" src="/script_reservation.js" type="text/javascript"></script>
 
 </body>
+
+<script type="text/javascript" src="/animation.js"></script>
+<script type="module" src="/script_reservation.js" type="javascript"></script>
 
 </html>
