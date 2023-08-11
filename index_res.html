@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="col_white">
+<head>
+	<meta charset="utf-8" />
+	<title>Echo Reservation</title>
+	
+	<link rel="stylesheet" href="css/style.css" />
+	<!--
+	<link rel="stylesheet" href="css/animation.css" />
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="img_bg">
+	<div>
+		<!-- Top -->
+		<div class="top">
+			<a href="index.html"><img src="img/logo_noir.png" alt="logo_noir"></a>
+			<canvas id="menu_act"></canvas>
+			<div class="menu">
+				<ul id="menu_list">
+					<li><a href="index.html">Exposition</a></li>
+					<li><a href="index_equipe.html">Notre Equipe</a></li>
+					<li><a href="index_res.html">Réservation</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Table Rerservation -->
+		<section>
+			<div class="reservation col_white inner">
+				<h3>Réservez une place <br> en une seule étape</h3>
+				<ul>
+					<li><input type="text" id="usr_prenom" name="prenom" required placeholder="Prénom"></li>
+					<li><input type="text" id="usr_nom" name="nom" required placeholder="Nom"></li>
+					<li><input type="email" id="usr_email" name="email" required placeholder="Email"></li>
+					<li><input type="date" id="usr_date" name="horaire" required placeholder="Horaire"></li>
+				</ul>
+				<button type="button" id="buttonsubmit"> Réserver </button>
+			</div>
+		</section>
+
+		<section>
+			<div class="arrive">
+				<div class="arrive_title col_black">
+					<h1>Accès</h1>
+					<h3>Découvrez la meilleure façon pour vous rendre à Arenberg, <br>
+						et où garer votre vélo ou votre voiture!</h3>
+						<div class="clear"></div>
+				</div>
+
+				<div class="col_white">
+					<img src="img/transport.png">
+				</div>
+			</div>
+		</section>
+	</div>
+
+	
+
+</body>
+
+<script type="text/javascript" src="js/three.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
+<!--
+<script type="module" src="/script_reservation.js" type="text/javascript"></script>
+-->
+
+</html>
